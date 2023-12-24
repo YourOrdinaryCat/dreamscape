@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: " en-US" }}">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ " /assets/css/main.css" | relative_url }}">
+</head>
+
+<body>
+  <main>
+    <article>
+      {{ content }}
+      <br>
+
+      <h2>posts</h2>
+      {% for post in site.posts %}
+      <br>
+      <a href="{{ post.url }}">
+        <h3>{{ post.title }}</h3>
+      </a>
+
+      <p class="secondary" no-margin>
+        <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%B %-d, %Y" }}
+        </time>
+        • {{ post.author }}
+      </p>
+
+      {% endfor %}
+    </article>
+  </main>
+
+  <footer>
+    <br>
+    <hr>
+    <br>
+
+    <p class="secondary wfsth" text-centeralign>Waiting for something to happen?</p>
+  </footer>
+</body>
+
+</html>

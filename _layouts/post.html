@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: " en-US" }}">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>{{ page.short_title }} | {{ site.title }}</title>
+  <meta name="author" content="{{ page.author }}">
+  <link rel="stylesheet" href="{{ " /assets/css/main.css" | relative_url }}">
+</head>
+
+<body>
+  <main>
+    <article>
+      <h1>{{ page.title }}</h1>
+      <span class="secondary">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%B %-d, %Y" }}
+        </time>
+        • {{ page.author }} • <a href="/">☆ dreamscape ☆</a>
+      </span>
+
+      {{ content }}
+    </article>
+  </main>
+
+
+  <footer>
+    <br>
+    <hr>
+    <br>
+
+    {%- if page.previous.url -%}
+    <a href="{{ page.previous.url }}" title="{{ page.previous.title }}">
+      <p class="secondary" no-margin>previous post</p>
+      <p no-margin>&lt; {{ page.previous.title }}</p>
+    </a>
+    {%- endif -%}
+
+    {%- if page.next.url -%}
+    <a href="{{ page.next.url }}" title="{{ page.next.title }}" text-rightalign>
+      <p class="secondary" no-margin>next post</p>
+      <p no-margin>{{ page.next.title }} &gt;</p>
+    </a>
+    {%- endif -%}
+  </footer>
+</body>
+
+</html>
