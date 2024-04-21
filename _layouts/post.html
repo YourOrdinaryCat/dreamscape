@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <title>{{ page.short_title }} | {{ site.title }}</title>
   <meta name="author" content="{{ page.author }}">
-  <link rel="stylesheet" href="/dreamscape/assets/css/main.css">
+  <link href="{{ '/assets/css/main.css' | relative_url }}" rel="stylesheet">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
         <time datetime="{{ page.date | date_to_xmlschema }}">
           {{ page.date | date: "%B %-d, %Y" }}
         </time>
-        • {{ page.author }} • <a href="/dreamscape/">☆ dreamscape ☆</a>
+        • {{ page.author }} • <a href="{{ '/' | relative_url }}">☆ dreamscape ☆</a>
       </span>
 
       {{ content }}
@@ -31,14 +31,14 @@
     <br>
 
     {%- if page.previous.url -%}
-    <a href="/dreamscape{{ page.previous.url }}" title="{{ page.previous.title }}">
+    <a href="{{ page.previous.url | relative_url }}" title="{{ page.previous.title }}">
       <p class="secondary" no-margin>previous post</p>
       <p no-margin>&lt; {{ page.previous.title }}</p>
     </a>
     {%- endif -%}
 
     {%- if page.next.url -%}
-    <a href="/dreamscape{{ page.next.url }}" title="{{ page.next.title }}" text-rightalign>
+    <a href="{{ page.next.url | relative_url }}" title="{{ page.next.title }}" text-rightalign>
       <p class="secondary" no-margin>next post</p>
       <p no-margin>{{ page.next.title }} &gt;</p>
     </a>
