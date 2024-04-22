@@ -180,7 +180,7 @@ blockquote>p {
 }
 
 .wfsth {
-  animation: fadein;
+  animation: fly-in;
   animation-delay: 30s;
   animation-duration: 600ms;
   animation-fill-mode: forwards;
@@ -188,7 +188,7 @@ blockquote>p {
   visibility: hidden;
 }
 
-@keyframes fadein {
+@keyframes fly-in {
   0% {
     opacity: 0;
     transform: translateY(16px);
