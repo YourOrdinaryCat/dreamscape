@@ -4,7 +4,7 @@
       "type": "node-terminal",
       "name": "Start",
       "request": "launch",
-      "command": "jekyll serve --baseurl=''",
+      "command": "bundle exec jekyll serve --baseurl=''",
       "internalConsoleOptions": "neverOpen"
     }
   ]
