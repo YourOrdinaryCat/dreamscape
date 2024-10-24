@@ -1,5 +1,7 @@
 title: "☆ dreamscape ☆"
 author: "YourOrdinaryCat"
+website: https://yourordinarycat.github.io
+basewebsite: /dreamscape
 sass:
   style: compressed
 plugins:
