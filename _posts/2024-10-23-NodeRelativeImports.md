@@ -45,6 +45,8 @@ import { thing, weee } from "#utils/index.js";
 const { thing, weee } = require("#utils");
 ```
 
+Of course, I'm assuming you have that folder structure - you should change it based on yours, of course.
+
 ## TypeScript Support
 
 What's that? You want to use TypeScript? Of course - having this in your `tsconfig.json` should do:
@@ -53,7 +55,7 @@ What's that? You want to use TypeScript? Of course - having this in your `tsconf
 {
   "compilerOptions": {
     "paths": {
-      "#utils/*": ["./dist/utils/*"]
+      "#utils/*": ["./src/utils/*"]
     }
   }
 }
