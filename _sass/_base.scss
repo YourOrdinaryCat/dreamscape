@@ -166,14 +166,6 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-code.language-plaintext {
-  background: rgb(240, 240, 240);
-  background: var(--secondary-background);
-  font-size: 0.8em;
-  padding: 0.2em;
-  word-wrap: break-word;
-}
-
 pre {
   background: rgb(240, 240, 240);
   background: var(--secondary-background);
