@@ -199,28 +199,6 @@ blockquote {
   padding: 8px;
 }
 
-blockquote > p {
+blockquote>p {
   margin: 8px 0;
-}
-
-.wfsth {
-  animation: fly-in;
-  animation-delay: 30s;
-  animation-duration: 600ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.41, 0.52, 0, 0.94);
-  visibility: hidden;
-}
-
-@keyframes fly-in {
-  0% {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-  }
 }
